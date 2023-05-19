@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1DC26D2A16FE7600F275CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DC26C2A16FE7600F275CA /* LoginView.swift */; };
 		4A4973E72A11ED3A0005C59D /* CodInActSumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4973E62A11ED3A0005C59D /* CodInActSumApp.swift */; };
 		4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4973E82A11ED3A0005C59D /* ContentView.swift */; };
 		4A4973EB2A11ED3B0005C59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973EA2A11ED3B0005C59D /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1DC26C2A16FE7600F275CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4A4973E32A11ED3A0005C59D /* CodInActSum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodInActSum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4973E62A11ED3A0005C59D /* CodInActSumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodInActSumApp.swift; sourceTree = "<group>"; };
 		4A4973E82A11ED3A0005C59D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				4A4973E62A11ED3A0005C59D /* CodInActSumApp.swift */,
 				4A4973E82A11ED3A0005C59D /* ContentView.swift */,
+				4A1DC26C2A16FE7600F275CA /* LoginView.swift */,
 				67B159532A16FDFA00C1C0DF /* DriveSimView.swift */,
 				4A4973EA2A11ED3B0005C59D /* Assets.xcassets */,
 				4A4973EC2A11ED3B0005C59D /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */,
 				4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */,
+				4A1DC26D2A16FE7600F275CA /* LoginView.swift in Sources */,
 				4A4973E72A11ED3A0005C59D /* CodInActSumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
