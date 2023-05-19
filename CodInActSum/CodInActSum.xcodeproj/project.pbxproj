@@ -12,6 +12,7 @@
 		4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4973E82A11ED3A0005C59D /* ContentView.swift */; };
 		4A4973EB2A11ED3B0005C59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973EA2A11ED3B0005C59D /* Assets.xcassets */; };
 		4A4973EE2A11ED3B0005C59D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973ED2A11ED3B0005C59D /* Preview Assets.xcassets */; };
+		4AE8CF2C2A1777FC00675C32 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE8CF2B2A1777FC00675C32 /* SQLite */; };
 		67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B159532A16FDFA00C1C0DF /* DriveSimView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE8CF2C2A1777FC00675C32 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = CodInActSum;
+			packageProductDependencies = (
+				4AE8CF2B2A1777FC00675C32 /* SQLite */,
+			);
 			productName = CodInActSum;
 			productReference = 4A4973E32A11ED3A0005C59D /* CodInActSum.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 4A4973DA2A11ED3A0005C59D;
+			packageReferences = (
+				4AE8CF2A2A1777FC00675C32 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 4A4973E42A11ED3A0005C59D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AE8CF2A2A1777FC00675C32 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AE8CF2B2A1777FC00675C32 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AE8CF2A2A1777FC00675C32 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A4973DB2A11ED3A0005C59D /* Project object */;
 }
