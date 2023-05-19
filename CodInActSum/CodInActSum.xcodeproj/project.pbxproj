@@ -11,6 +11,7 @@
 		4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4973E82A11ED3A0005C59D /* ContentView.swift */; };
 		4A4973EB2A11ED3B0005C59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973EA2A11ED3B0005C59D /* Assets.xcassets */; };
 		4A4973EE2A11ED3B0005C59D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973ED2A11ED3B0005C59D /* Preview Assets.xcassets */; };
+		67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B159532A16FDFA00C1C0DF /* DriveSimView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4A4973E82A11ED3A0005C59D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A4973EA2A11ED3B0005C59D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A4973ED2A11ED3B0005C59D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67B159532A16FDFA00C1C0DF /* DriveSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSimView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4A4973E62A11ED3A0005C59D /* CodInActSumApp.swift */,
 				4A4973E82A11ED3A0005C59D /* ContentView.swift */,
+				67B159532A16FDFA00C1C0DF /* DriveSimView.swift */,
 				4A4973EA2A11ED3B0005C59D /* Assets.xcassets */,
 				4A4973EC2A11ED3B0005C59D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */,
 				4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */,
 				4A4973E72A11ED3A0005C59D /* CodInActSumApp.swift in Sources */,
 			);
