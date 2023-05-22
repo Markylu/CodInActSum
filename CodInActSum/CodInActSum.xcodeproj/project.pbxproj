@@ -12,6 +12,8 @@
 		4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4973E82A11ED3A0005C59D /* ContentView.swift */; };
 		4A4973EB2A11ED3B0005C59D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973EA2A11ED3B0005C59D /* Assets.xcassets */; };
 		4A4973EE2A11ED3B0005C59D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4973ED2A11ED3B0005C59D /* Preview Assets.xcassets */; };
+		4AE817502A1B5B4300223B39 /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE8174F2A1B5B4300223B39 /* DBFile.swift */; };
+		4AE817522A1B5D0700223B39 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE817512A1B5D0700223B39 /* NewUserView.swift */; };
 		4AE8CF2C2A1777FC00675C32 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4AE8CF2B2A1777FC00675C32 /* SQLite */; };
 		67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B159532A16FDFA00C1C0DF /* DriveSimView.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +25,8 @@
 		4A4973E82A11ED3A0005C59D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A4973EA2A11ED3B0005C59D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A4973ED2A11ED3B0005C59D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AE8174F2A1B5B4300223B39 /* DBFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
+		4AE817512A1B5D0700223B39 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		67B159532A16FDFA00C1C0DF /* DriveSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSimView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,8 @@
 				4A4973E62A11ED3A0005C59D /* CodInActSumApp.swift */,
 				4A4973E82A11ED3A0005C59D /* ContentView.swift */,
 				4A1DC26C2A16FE7600F275CA /* LoginView.swift */,
+				4AE817512A1B5D0700223B39 /* NewUserView.swift */,
+				4AE8174F2A1B5B4300223B39 /* DBFile.swift */,
 				67B159532A16FDFA00C1C0DF /* DriveSimView.swift */,
 				4A4973EA2A11ED3B0005C59D /* Assets.xcassets */,
 				4A4973EC2A11ED3B0005C59D /* Preview Content */,
@@ -154,6 +160,8 @@
 				67B159542A16FDFA00C1C0DF /* DriveSimView.swift in Sources */,
 				4A4973E92A11ED3A0005C59D /* ContentView.swift in Sources */,
 				4A1DC26D2A16FE7600F275CA /* LoginView.swift in Sources */,
+				4AE817502A1B5B4300223B39 /* DBFile.swift in Sources */,
+				4AE817522A1B5D0700223B39 /* NewUserView.swift in Sources */,
 				4A4973E72A11ED3A0005C59D /* CodInActSumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,35 +1,38 @@
 //
-//  LoginView.swift
+//  NewUserView.swift
 //  CodInActSum
 //
-//  Created by Markus Lu on 19/5/2023.
+//  Created by Markus Lu on 22/5/2023.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct NewUserView: View {
     @State var username: String = ""
     @State var password: String = ""
+    @State var email: String = ""
     @State var trueusername: String = "Admin"
     @State var truepassword: String = "Adminpw"
-    @State var showMenu: Bool = false
-    @State var createUser: Bool = false
+    @State var loginPage: Bool = false
     var body: some View {
         NavigationStack{
-//            NavigationLink (destination: ContentView(), isActive: $showMenu) {
-//                EmptyView()
-//            }
-            NavigationLink (destination: NewUserView(), isActive: $createUser) {
+            NavigationLink (destination: LoginView(), isActive: $loginPage) {
                 EmptyView()
             }
             VStack{
-                Text("Login")
+                Text("Create Account")
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
                     .padding([.top, .bottom, .trailing], 2.0)
                 TextField("Username", text:$username, prompt: Text("Username"))
+                    .padding(.all, 8)
+                    .background(Color(.systemGray6))
+                    .disableAutocorrection(true)
+                    .cornerRadius(5)
+                    .frame(maxWidth: 300)
+                TextField("Email", text:$email, prompt: Text("Email"))
                     .padding(.all, 8)
                     .background(Color(.systemGray6))
                     .disableAutocorrection(true)
@@ -44,11 +47,9 @@ struct LoginView: View {
                 
                 
                 Button {
-                    if username == trueusername && password == truepassword{
-                        showMenu = true
-                    }
+                    loginPage = true
                 } label: {
-                    Text("Login")
+                    Text("Create!")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)
@@ -57,25 +58,13 @@ struct LoginView: View {
                         .background(Color.pink)
                         .cornerRadius(20)
                 }
-                Button {
-                    createUser = true
-                } label: {
-                    Text("Create Account")
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding(.all, 5)
-                        .padding([.leading, .trailing], 20)
-                        .background(Color.pink)
-                        .cornerRadius(20)
-                }
-
             }
         }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct NewUserView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        NewUserView()
     }
 }
