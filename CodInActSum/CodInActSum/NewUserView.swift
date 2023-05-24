@@ -14,6 +14,7 @@ struct NewUserView: View {
     @State var trueusername: String = "Admin"
     @State var truepassword: String = "Adminpw"
     @State var loginPage: Bool = false
+    let mydb = MyDB()
     var body: some View {
         NavigationStack{
             NavigationLink (destination: LoginView(), isActive: $loginPage) {
@@ -47,6 +48,7 @@ struct NewUserView: View {
                 
                 
                 Button {
+                    mydb.newUser(iname: String(username), iemail: String(email), ipassword: String(password))
                     loginPage = true
                 } label: {
                     Text("Create!")

@@ -14,26 +14,41 @@ class MyDB{
     init() {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         self.dbFile = "\(path.first ?? "")/db.sqlite3"
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+    }
+    
+    func newUser(iname:String, iemail:String, ipassword:String){
         do {
             let db = try Connection(self.dbFile)
             let users = Table("users")
             let id = Expression<Int64>("id")
-            let name = Expression<String?>("name")
+            let username = Expression<String>("username")
+            let password = Expression<String>("password")
             let email = Expression<String>("email")
             try db.run(users.create { t in
                 t.column(id, primaryKey: true)
-                t.column(name)
-                t.column(email, unique: true)
+                t.column(username, unique: true)
+                t.column(email, unique: true, check: email.like("%@%"))
+                t.column(password)
             })
-        } catch {
+            let insert = users.insert(username <- iname, email <- iemail, password <- ipassword)
+            try  db.run(insert)
+            for user in try db.prepare(users) {
+                print("id: \(user[id]), username: \(user[username]), email: \(user[email]), password: \(user[password])")
+                // id: 1, name: Optional("Alice"), email: alice@mac.com
+            }
+        }catch{
             print(error)
         }
-        return
     }
     
-    func newUser(){
-        do {
-            
+    func deleteAllUsers(){
+        do{
+            let db = try Connection(self.dbFile)
+            let users = Table("users")
+            try db.run(users.drop(ifExists: true))
+        }catch{
+            print(error)
         }
     }
     
@@ -67,6 +82,7 @@ class MyDB{
                 print("id: \(user[id]), name: \(user[name]), email: \(user[email])")
                 // id: 1, name: Optional("Alice"), email: alice@mac.com
             }
+            
             // SELECT * FROM "users"
             
             let alice = users.filter(id == rowid)
