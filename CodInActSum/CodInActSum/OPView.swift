@@ -52,8 +52,7 @@ struct OPView: View {
                     .padding([.leading, .trailing], 30)
                     .background(Color.pink)
                     .cornerRadius(20)
-            }
-            
+            }            
         }
     }
 }

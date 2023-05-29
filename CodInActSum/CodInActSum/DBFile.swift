@@ -52,6 +52,27 @@ class MyDB{
         }
     }
     
+    func loginCheck(iname:String, ipassword:String) -> Bool{
+            var login = false
+        do{
+            let db = try Connection(self.dbFile)
+            let users = Table("users")
+            let username = Expression<String>("username")
+            let password = Expression<String>("password")
+            let email = Expression<String>("email")
+            let id = Expression<Int64>("id")
+            let query = users.filter(username == iname && password == ipassword)
+            for user in try db.prepare(query) {
+                print("id: \(user[id]), username: \(user[username]), email: \(user[email]), password: \(user[password])")
+                login = true
+            }
+        }catch{
+            print(error)
+        }
+        return login
+    }
+
+    
     
     
     func dbstuff(){

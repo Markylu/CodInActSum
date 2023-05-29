@@ -10,15 +10,15 @@ import SwiftUI
 struct LoginView: View {
     @State var username: String = ""
     @State var password: String = ""
-    @State var trueusername: String = "Admin"
-    @State var truepassword: String = "Adminpw"
     @State var showMenu: Bool = false
     @State var createUser: Bool = false
+    @State var wronglogin: Float = 0
+    let mydb = MyDB()
     var body: some View {
         NavigationStack{
-//            NavigationLink (destination: ContentView(), isActive: $showMenu) {
-//                EmptyView()
-//            }
+            NavigationLink (destination: ContentView(), isActive: $showMenu) {
+                EmptyView()
+            }
             NavigationLink (destination: NewUserView(), isActive: $createUser) {
                 EmptyView()
             }
@@ -35,17 +35,21 @@ struct LoginView: View {
                     .disableAutocorrection(true)
                     .cornerRadius(5)
                     .frame(maxWidth: 300)
+                    .border(.red, width: CGFloat(wronglogin))
                 TextField("password", text:$password, prompt: Text("Password"))
                     .padding(.all, 8)
                     .background(Color(.systemGray6))
                     .disableAutocorrection(true)
                     .cornerRadius(5)
                     .frame(maxWidth: 300)
-                
+                    .border(.red, width: CGFloat(wronglogin))
                 
                 Button {
-                    if username == trueusername && password == truepassword{
-                        showMenu = true
+                    showMenu = mydb.loginCheck(iname: username, ipassword: password)
+                    if showMenu == false{
+                        wronglogin = 2
+                    }else{
+                        wronglogin = 0
                     }
                 } label: {
                     Text("Login")
