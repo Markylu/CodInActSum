@@ -14,7 +14,23 @@ class MyDB{
     init() {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         self.dbFile = "\(path.first ?? "")/db.sqlite3"
-        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+//        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+        do {
+            let db = try Connection(self.dbFile)
+            let users = Table("users")
+            let id = Expression<Int64>("id")
+            let username = Expression<String>("username")
+            let password = Expression<String>("password")
+            let email = Expression<String>("email")
+            try db.run(users.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: true)
+                t.column(username, unique: true)
+                t.column(email, unique: true, check: email.like("%@%"))
+                t.column(password)
+            })
+           }catch{
+               print(error)
+           }
     }
     
     func newUser(iname:String, iemail:String, ipassword:String){
@@ -25,12 +41,6 @@ class MyDB{
             let username = Expression<String>("username")
             let password = Expression<String>("password")
             let email = Expression<String>("email")
-            try db.run(users.create { t in
-                t.column(id, primaryKey: true)
-                t.column(username, unique: true)
-                t.column(email, unique: true, check: email.like("%@%"))
-                t.column(password)
-            })
             let insert = users.insert(username <- iname, email <- iemail, password <- ipassword)
             try  db.run(insert)
             for user in try db.prepare(users) {
@@ -72,7 +82,22 @@ class MyDB{
         return login
     }
 
-    
+    func showAll(){
+        do{
+            let db = try Connection(self.dbFile)
+            let users = Table("users")
+            let id = Expression<Int64>("id")
+            let username = Expression<String>("username")
+            let password = Expression<String>("password")
+            let email = Expression<String>("email")
+            for user in try db.prepare(users) {
+                print("id: \(user[id]), username: \(user[username]), email: \(user[email]), password: \(user[password])")
+                // id: 1, name: Optional("Alice"), email: alice@mac.com
+            }
+        }catch{
+            print(error)
+        }
+    }
     
     
     func dbstuff(){
