@@ -1,0 +1,8 @@
+Target dependency graph (4 targets)
+SQLite in SQLite.swift, no dependencies
+SQLite in SQLite.swift, depends on:
+SQLite in SQLite.swift (explicit)
+CodInActSum in CodInActSum, depends on:
+SQLite in SQLite.swift (explicit)
+SQLite_Sources in SQLite_Sources, depends on:
+CodInActSum in CodInActSum (explicit)

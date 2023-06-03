@@ -1,14 +1,14 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "fa3713ef687d49d6e02e6b1e2ca7aa2325233a87c79c26adb837c83e5a0992c1"
-build_start_time: [1685697085, 52218914]
-build_end_time: [1685697085, 381315946]
+build_start_time: [1685699656, 44404029]
+build_end_time: [1685699656, 69416999]
 inputs:
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/CodInActSumApp.swift": !private [1685348164, 527734279]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/ContentView.swift": !private [1684125726, 68515300]
-  "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/DBFile.swift": !private [1685670285, 319226264]
+  "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/DBFile.swift": !private [1685698698, 448482990]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/DriveSimView.swift": !private [1684457175, 233354091]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/LoginView.swift": !private [1685069019, 69131135]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/NewUserView.swift": !private [1685670285, 319546937]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/NewsScrollView.swift": !private [1685695400, 955072879]
-  "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/NewsView.swift": !private [1685696911, 26628494]
+  "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/NewsView.swift": !private [1685699136, 860010862]
   "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum/OPView.swift": !private [1685435885, 578585624]

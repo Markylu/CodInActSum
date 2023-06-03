@@ -51,7 +51,6 @@ class MyDB{
             print(error)
         }
     }
-    
     func deleteAllUsers(){
         do{
             let db = try Connection(self.dbFile)

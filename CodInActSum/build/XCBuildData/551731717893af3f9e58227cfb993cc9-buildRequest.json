@@ -8,6 +8,15 @@
   "configuredTargets" : [
     {
       "guid" : "6ebc8922940e16a60048c2b73a6ac8cf457d496744cb05a497f603c167b84c66"
+    },
+    {
+      "guid" : "PLAYGROUND-PRODUCT:SQLite_Sources-PLAYGROUND-TARGET:/Users/markuslu/Library/Developer/Xcode/DerivedData/CodInActSum-giyneaawbdzvzygvvxywjmcxpxsi/SourcePackages/checkouts/SQLite.swift/SQLite.playground"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:SQLite"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SQLite"
     }
   ],
   "containerPath" : "/Users/markuslu/Documents/GitHub/CodInActSum/CodInActSum/CodInActSum.xcodeproj",

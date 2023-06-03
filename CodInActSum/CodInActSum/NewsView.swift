@@ -11,7 +11,7 @@ struct NewsView: View {
     var body: some View {
         VStack{
             Text("Latest News")
-                .font(Font.custom("dimitri",size: 60))
+                .font(.custom("DimitriSwank",size: 60))
                 
                 
             Spacer(minLength: 300)
