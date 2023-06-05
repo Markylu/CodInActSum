@@ -9,14 +9,32 @@ import SwiftUI
 
 struct NewsView: View {
     var body: some View {
-        VStack{
-            Text("Latest News")
-                .font(.custom("DimitriSwank",size: 60))
-                
-                
-            Spacer(minLength: 300)
+        ZStack{
+            RoundedRectangle(cornerRadius: 5.0)
+                .fill(.orange)
+                .frame(height:1000)
+                .position(x:196,y:300)
             VStack{
-                NewsScrollView()
+                ZStack{
+                    RoundedRectangle(cornerRadius: 7.0)
+                        .fill(.red)
+                        .frame(height:400)
+                        .position(x:197,y:-90)
+                    VStack{
+                        Text("Latest News")
+                            .font(.custom("Default", size: 60))
+                            .position(x:200,y:50)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                        Text("Source: https://www.formula1.com/en/latest/all.html")
+                            .position(x:200,y:0)
+                            .font(.body)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                    NewsScrollView()
+                
             }
         }
     }
