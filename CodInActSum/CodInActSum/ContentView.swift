@@ -16,6 +16,7 @@ struct ContentView: View {
                         Label("News", systemImage: "newspaper.fill")
                     }
                 DriveSimView().tabItem{Label("Analyse", systemImage: "eye.fill")}
+                OPView().tabItem{Label("ADMIN", systemImage: "gearshape.2.fill")}
             }
         }
             .accentColor(.red)    }
