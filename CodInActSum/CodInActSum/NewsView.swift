@@ -19,7 +19,7 @@ struct NewsView: View {
                     RoundedRectangle(cornerRadius: 7.0)
                         .fill(.red)
                         .frame(height:400)
-                        .position(x:197,y:-90)
+                        .position(x:197,y:-50)
                     VStack{
                         Text("Latest News")
                             .font(.custom("Default", size: 60))
@@ -27,13 +27,15 @@ struct NewsView: View {
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                         Text("Source: https://www.formula1.com/en/latest/all.html")
+                            .padding(.top, -100.0)
                             .position(x:200,y:0)
                             .font(.body)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                     }
                 }
-                    NewsScrollView()
+                NewsScrollView()
+                    .padding(.top, -190.0)
                 
             }
         }

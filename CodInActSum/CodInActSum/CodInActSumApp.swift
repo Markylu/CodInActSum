@@ -11,7 +11,7 @@ import SwiftUI
 struct CodInActSumApp: App {
     var body: some Scene {
         WindowGroup {
-            NewsView()
+            LoginView()
         }
     }
 }

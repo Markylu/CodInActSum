@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello hey , worldd!")
+        TabView{
+            Group{
+                NewsView()
+                    .tabItem{
+                        Label("News", systemImage: "newspaper.fill")
+                    }
+                DriveSimView().tabItem{Label("Analyse", systemImage: "eye.fill")}
+            }
         }
-        .padding()
-    }
+            .accentColor(.red)    }
 }
 
 struct ContentView_Previews: PreviewProvider {

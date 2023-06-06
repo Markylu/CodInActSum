@@ -20,45 +20,54 @@ struct NewUserView: View {
             NavigationLink (destination: LoginView(), isActive: $loginPage) {
                 EmptyView()
             }
-            VStack{
-                Text("Create Account")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.white)
-                    .multilineTextAlignment(.leading)
-                    .padding([.top, .bottom, .trailing], 2.0)
-                TextField("Username", text:$username, prompt: Text("Username"))
-                    .padding(.all, 8)
-                    .background(Color(.systemGray6))
-                    .disableAutocorrection(true)
-                    .cornerRadius(5)
-                    .frame(maxWidth: 300)
-                TextField("Email", text:$email, prompt: Text("Email"))
-                    .padding(.all, 8)
-                    .background(Color(.systemGray6))
-                    .disableAutocorrection(true)
-                    .cornerRadius(5)
-                    .frame(maxWidth: 300)
-                TextField("password", text:$password, prompt: Text("Password"))
-                    .padding(.all, 8)
-                    .background(Color(.systemGray6))
-                    .disableAutocorrection(true)
-                    .cornerRadius(5)
-                    .frame(maxWidth: 300)
-                
-                
-                Button {
-                    mydb.newUser(iname: String(username), iemail: String(email), ipassword: String(password))
-                    loginPage = true
-                } label: {
-                    Text("Create!")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding(.all, 10)
-                        .padding([.leading, .trailing], 30)
-                        .background(Color.pink)
-                        .cornerRadius(20)
+            ZStack{
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 1000,height: 1000)
+                VStack{
+                    Spacer(minLength: 200)
+                    Image("Logo")
+                        .resizable()
+                        .scaledToFit()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 300, height: 300)
+                        .clipShape(Circle())
+                        .overlay {Circle().stroke(.white, lineWidth: 1)}.shadow(radius: 7)
+                    Spacer(minLength: 30)
+                    TextField("Username", text:$username, prompt: Text("Username"))
+                        .padding(.all, 8)
+                        .background(Color(.systemGray6))
+                        .disableAutocorrection(true)
+                        .cornerRadius(5)
+                        .frame(maxWidth: 300)
+                    TextField("Email", text:$email, prompt: Text("Email"))
+                        .padding(.all, 8)
+                        .background(Color(.systemGray6))
+                        .disableAutocorrection(true)
+                        .cornerRadius(5)
+                        .frame(maxWidth: 300)
+                    TextField("password", text:$password, prompt: Text("Password"))
+                        .padding(.all, 8)
+                        .background(Color(.systemGray6))
+                        .disableAutocorrection(true)
+                        .cornerRadius(5)
+                        .frame(maxWidth: 300)
+                    
+                    
+                    Button {
+                        mydb.newUser(iname: String(username), iemail: String(email), ipassword: String(password))
+                        loginPage = true
+                    } label: {
+                        Text("Create!")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(.all, 10)
+                            .padding([.leading, .trailing], 30)
+                            .background(Color.orange)
+                            .cornerRadius(20)
+                    }
+                    Spacer(minLength: 300)
                 }
             }
         }

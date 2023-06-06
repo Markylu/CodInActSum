@@ -9,14 +9,17 @@ import SwiftUI
 
 struct DriveSimView: View {
     var body: some View {
-        VStack {
-            Image("Race-analysis")
-            .resizable()
-            //.scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
+        GeometryReader{ geo in
+            ScrollView {
+                VStack{
+                    Image("Race-analysis")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                        .position(x:196,y:360)
+                }
+            }
         }
-       
     }
 }
 
