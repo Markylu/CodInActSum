@@ -56,6 +56,7 @@ class MyDB{
             let db = try Connection(self.dbFile)
             let users = Table("users")
             try db.run(users.drop(ifExists: true))
+            print("deleted all")
         }catch{
             print(error)
         }

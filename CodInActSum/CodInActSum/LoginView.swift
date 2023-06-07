@@ -42,19 +42,19 @@ struct LoginView: View {
                         .disableAutocorrection(true)
                         .cornerRadius(5)
                         .frame(maxWidth: 300)
-                        .border(.red, width: CGFloat(wronglogin))
+                        .border(.orange, width: CGFloat(wronglogin))
                     TextField("password", text:$password, prompt: Text("Password"))
                         .padding(.all, 8)
                         .background(Color(.systemGray6))
                         .disableAutocorrection(true)
                         .cornerRadius(5)
                         .frame(maxWidth: 300)
-                        .border(.red, width: CGFloat(wronglogin))
+                        .border(.orange, width: CGFloat(wronglogin))
                     
                     Button {
                         showMenu = mydb.loginCheck(iname: username, ipassword: password)
                         if showMenu == false{
-                            wronglogin = 2
+                            wronglogin = 5
                         }else{
                             wronglogin = 0
                         }
